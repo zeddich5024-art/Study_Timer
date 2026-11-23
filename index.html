@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StudyFlow — Focus Timer</title><link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<link rel="icon" href="data:,">
+</head>
+<body>
+<div class="bg" id="bg"></div><div class="veil"></div>
+<header><a class="logo" href="#">✦ StudyFlow</a><button id="fullscreen" aria-label="Plein écran">⛶</button></header>
+<main>
+<p class="eyebrow">PRENDS TON TEMPS · CONCENTRE-TOI</p>
+<p class="quote">Un petit pas chaque jour te rapproche de ton objectif.</p>
+<nav class="modes">
+<button class="mode active" data-mode="focus">Focus</button>
+<button class="mode" data-mode="short">Pause courte</button>
+<button class="mode" data-mode="long">Pause longue</button>
+</nav>
+<section class="clock"><div>
+<span id="label">TEMPS DE CONCENTRATION</span>
+<h1 id="time">25:00</h1><small id="session">Session 1</small>
+</div></section>
+<div class="actions"><button id="reset" class="secondary">↺ Reset</button><button id="start" class="primary">▶ Start</button></div>
+<p id="status" aria-live="polite">Prêt quand tu l'es.</p>
+<section class="settings">
+<article class="card">
+<div class="heading"><b>▧ Arrière-plan</b><label for="upload">+ Importer</label><input id="upload" type="file" accept="image/*" hidden></div>
+<div class="swatches backgrounds">
+
+    <button class="wall selected"
+        data-bg="image/1.jpg"
+        style="background-image:url('image/1.jpg')"
+        aria-label="Mountain"></button>
+
+    <button class="wall"
+        data-bg="image/2.jpg"
+        style="background-image:url('image/2.jpg')"
+        aria-label="Rainy study"></button>
+
+    <button class="wall"
+        data-bg="image/3.jpg"
+        style="background-image:url('image/3.jpg')"
+        aria-label="Sunset"></button>
+
+    <button class="wall"
+        data-bg="image/4.jpg"
+        style="background-image:url('image/4.jpg')"
+        aria-label="Night"></button>
+
+    <button class="wall"
+        data-bg="image/5.jpg"
+        style="background-image:url('image/5.jpg')"
+        aria-label="Forest"></button>
+
+    <button class="wall"
+        data-bg="image/6.jpg"
+        style="background-image:url('image/6.jpg')"
+        aria-label="Sakura"></button>
+
+    <button class="wall"
+        data-bg="image/7.jpg"
+        style="background-image:url('image/7.jpg')"
+        aria-label="Lake"></button>
+
+    <button class="wall"
+        data-bg="image/8.jpg"
+        style="background-image:url('image/8.jpg')"
+        aria-label="City"></button>
+
+    <button class="wall"
+        data-bg="image/9.jpg"
+        style="background-image:url('image/9.jpg')"
+        aria-label="Bamboo"></button>
+
+</div>
+</article>
+<article class="card">
+<div class="heading"><b>◉ Couleur de l'horloge</b></div>
+<div class="swatches"><button class="dot selected" data-color="#ffffff" style="--c:#fff" aria-label="Blanc"></button><button class="dot" data-color="#d9f99d" style="--c:#d9f99d" aria-label="Vert"></button><button class="dot" data-color="#bfdbfe" style="--c:#bfdbfe" aria-label="Bleu"></button><button class="dot" data-color="#fbcfe8" style="--c:#fbcfe8" aria-label="Rose"></button><input id="color" type="color" value="#ffffff" aria-label="Couleur personnalisée"></div>
+</article>
+<article class="card sound-card">
+<div class="heading"><b>♫ Ambiance sonore</b><button id="soundToggle">Désactivé</button></div>
+<div class="sound-row"><select id="soundType" aria-label="Type de son"><option value="rain">Pluie douce</option><option value="wind">Vent</option><option value="noise">Bruit doux</option></select>
+<label>Volume <input id="volume" type="range" min="0" max="100" value="35"><span id="volumeText">35%</span></label></div>
+<small>Son généré dans ton navigateur.</small>
+</article>
+</section>
+<section class="custom"><label for="minutes">Durée personnalisée (1–240 minutes)</label><div><input id="minutes" type="number" min="1" max="240" value="25"><button id="apply">Appliquer</button></div></section>
+</main><footer>Respire. Concentre-toi. Recommence. ✦</footer>
+</body></html>
